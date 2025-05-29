@@ -1,0 +1,14 @@
+.container {
+	width: 100%;
+	max-width: 640px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include tablet() {
+		max-width: 1458px;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}
