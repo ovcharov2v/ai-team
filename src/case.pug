@@ -1,0 +1,69 @@
+extends pug/base
+
+block content
+    section.page-case.container
+        .page-case__content-col
+            .page-case__top-box
+                .page-case__top-wrap
+                    h1.page-case__title Автоматические акты сверки
+                    img.page-case__logo(src="./images/page-case/logo.svg", alt="")
+                    p Поступила задача - автоматически проверять акты сверки. Коллектив не растерялся и смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
+                // agent
+                article.agent.agent--border.page-case__agent.page-case__agent--mobile
+                   .agent__title ИИ-Агент Бухгалтер
+                   .agent__text Бухгалтерия и ОЦО
+                   ul.agent__list
+                       li.agent__list-el Заполнит формы первичных документов
+                       li.agent__list-el Проведет инвентаризацию
+                       li.agent__list-el Выполнит сверку с контрагентами
+                       li.agent__list-el Соберет авансовые отчеты
+                   button.button.button--blue.agent__btn(type="button", data-modal="callback") Записаться на демо
+            +picture("page-case/img").page-case__img
+            .page-case__content-box
+                h2 Какие проблемы решили
+                ul
+                    li Снимается нагрузка с административного
+                        br
+                        |персонала по планированию календаря выплат
+                    li За счет более точного планирования выплат, снижаются риски неоплаты
+                    li Позволяет держать оборотные средства на счетах компании,
+                        br
+                        |не оплачивая счета раньше необходимого срока
+                h2 Что пришлось преодолеть?
+                p В первую очередь необходимо настроить интеграцию, для того, чтобы архив договоров загружался в систему. Далее необходимо проверить работу системы, просмотрев результаты календаря  и сравнив их с реальностью. Возможно, потребуется корректировка промптов.
+        .page-case__agent-col
+            // agent
+            article.agent.agent--border.page-case__agent
+                .agent__title ИИ-Агент Бухгалтер
+                .agent__text Бухгалтерия и ОЦО
+                ul.agent__list
+                    li.agent__list-el Заполнит формы первичных документов
+                    li.agent__list-el Проведет инвентаризацию
+                    li.agent__list-el Выполнит сверку с контрагентами
+                    li.agent__list-el Соберет авансовые отчеты
+                button.button.button--blue.agent__btn(type="button", data-modal="callback") Записаться на демо
+    // Section Other
+    section.section-other
+        .container
+            .section-other__box
+                .section-other__content-col
+                    h2.section-other__title Кейсы
+                .section-other__slider-col
+                    // slider
+                    .section-other__slider.swiper
+                        .swiper-wrapper
+                            // slide
+                            article.case.section-cases__slide.swiper-slide
+                                .case__logo-box
+                                    img.case__logo(src="./images/section-trust/logo1.svg", alt="")
+                                h3.case__title Автоматические акты сверки
+                                p.case__text Поступила задача - автоматически проверять акты сверки. Коллектив не растерялся и смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
+                                a.case__link(href="./case.html") Подробнее
+                            // slide
+                            article.case.section-cases__slide.swiper-slide
+                                .case__logo-box
+                                    img.case__logo(src="./images/section-trust/logo3.svg", alt="")
+                                h3.case__title Анализ КС-2
+                                p.case__text Руководство попросило провести анализ. Коллектив смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
+                                a.case__link(href="./case.html") Подробнее
+                .section-other__content-col

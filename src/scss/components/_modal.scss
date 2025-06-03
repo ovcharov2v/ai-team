@@ -1,0 +1,162 @@
+.modal {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 72px 0 0;
+  overflow-y: auto;
+  background-color: rgba($color-black, .6);
+  transition: opacity $transition-default;
+  backdrop-filter: blur(3px) grayscale(1);
+
+  @include tablet {
+    padding: 112px 0 0;
+  }
+  @include desktop {
+    padding: 20px;
+  }
+
+  &--show {
+    opacity: 1;
+  }
+
+  &__window {
+    opacity: 0;
+    transform: translateY(20%);
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    padding: 88px 24px 24px;
+    margin: auto auto 0 ;
+    background-color: #fff;
+    border-radius: 24px 24px 0 0;
+    transition: opacity $transition-default, transform $transition-default;
+
+    @include tablet {
+      padding: 88px 32px 40px;
+    }
+    @include desktop {
+      transform: translateX(20%);
+      margin: auto 0 auto auto;
+      padding: 88px 49px 40px;
+      border-radius: 24px;
+    }
+
+    .modal--show & {
+      opacity: 1;
+      transform: none;
+    }
+
+    .modal--success & {
+      margin: auto !important;
+      text-align: center;
+      border-radius: 24px;
+      padding: 60px 24px 24px !important;
+
+      @include tablet {
+        transform: translateY(20%);
+        padding: 40px !important;
+      }
+      @include desktop {
+        transform: translateY(20%);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 1.4;
+    font-weight: 500;
+
+    .modal--success & {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
+    .modal--success & {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='48' height='48' rx='24' fill='%23EAF3FF'/%3E%3Cpath d='M24 25.4142L31.7782 33.1924L33.1924 31.7782L25.4142 24L33.1924 16.2218L31.7782 14.8076L24 22.5858L16.2218 14.8076L14.8076 16.2218L22.5858 24L14.8076 31.7782L16.2218 33.1924L24 25.4142Z' fill='%23151515'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: filter $transition-default;
+
+    @include tablet {
+      width: 48px;
+      height: 48px;
+    }
+    @include desktop {
+    }
+
+    &:hover {
+      filter: brightness(0.95) saturate(2.5);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include tablet {
+      gap: 24px;
+    }
+    @include desktop {
+    }
+  }
+
+  &__form-row {
+    display: grid;
+    grid-template: auto / 100%;
+    grid-gap: 16px;
+
+    @include tablet {
+      grid-template: auto / repeat(2, minmax(0,1fr));
+      grid-gap: 24px;
+    }
+    @include desktop {
+    }
+  }
+
+  &__submit {
+  }
+
+  &__order-checkbox {
+    order: 1;
+    @include tablet {
+      order: unset;
+    }
+  }
+
+  &__order-textarea {
+    order: 2;
+    @include tablet {
+      order: unset;
+    }
+  }
+
+  &__order-btn {
+    order: 3;
+    @include tablet {
+      order: unset;
+    }
+  }
+}

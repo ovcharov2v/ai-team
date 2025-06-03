@@ -1,0 +1,66 @@
+.section-security {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #F9F9F9;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__slider {
+    overflow: visible;
+
+    @include tablet {
+      overflow: hidden;
+    }
+    @include desktop {
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+
+    @include tablet {
+      flex-direction: row;
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      text-align: left;
+    }
+    @include desktop {
+      gap: 16px;
+    }
+  }
+
+  &__slide-img {
+    display: block;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+
+    @include desktop {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  &__slide-text {
+  }
+}

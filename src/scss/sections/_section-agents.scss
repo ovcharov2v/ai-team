@@ -1,0 +1,58 @@
+.section-agents {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: #F9F9F9;
+  overflow: hidden;
+
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-bottom: 60px;
+  }
+
+  &__title-box {
+    margin-bottom: 24px;
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+    @include desktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+  }
+
+  &__slider {
+    .swiper {
+      @include tablet {
+        max-width: 386px;
+        margin: 0 auto;
+        overflow: visible;
+      }
+
+      @include desktop {
+        max-width: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__item {
+    height: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      border-color: #fff;
+    }
+
+    @include desktop {
+      border-color: #fff;}
+  }
+}

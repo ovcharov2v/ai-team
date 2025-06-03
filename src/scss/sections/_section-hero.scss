@@ -1,0 +1,108 @@
+.section-hero {
+  padding-top: 70px;
+
+  @include tablet {
+    padding-top: 94px;
+  }
+  @include desktop {
+  }
+
+  &__box {
+    padding-top: 22px;
+    padding-bottom: 32px;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+
+    @include desktop {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template: auto / repeat(3, minmax(0,1fr));
+    grid-gap: 20px;
+    width: 100%;
+    margin: 0 auto 32px;
+
+    @include tablet {
+      grid-gap: 28px;
+      max-width: 710px;
+      margin-bottom: 24px;
+    }
+    @include desktop {
+      max-width: 1010px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__item-img {
+    display: block;
+    max-width: 100%;
+    max-height: 178px;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-text {
+    display: none;
+    font-size: 15px;
+    line-height: 1.5;
+
+    @include tablet {
+      display: block;
+    }
+
+    br {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    @include tablet {
+      margin-bottom: 16px;
+    }
+    @include desktop {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
+    max-width: 580px;
+    margin-bottom: 16px;
+
+
+    @include desktop {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__btn {
+    min-width: 260px;
+
+    @include tablet {
+      min-width: unset;
+    }
+  }
+}

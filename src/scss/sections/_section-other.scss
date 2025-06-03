@@ -1,0 +1,39 @@
+.section-other {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #EAF3FF;
+  overflow: hidden;
+
+  @include tablet {
+  }
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__box {
+    @include tablet {
+      display: grid;
+      grid-template: auto / minmax(0,1fr) 692px minmax(0, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  &__slider {
+    &.swiper {
+      overflow: visible;
+
+      @include tablet {
+        overflow: hidden;
+      }
+      @include desktop {}
+    }
+  }
+}

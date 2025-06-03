@@ -1,0 +1,47 @@
+.section-faq {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__title-box {
+    margin-bottom: 10px;
+    text-align: center;
+
+    @include tablet {
+    }
+    @include desktop {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    @include tablet {
+    }
+    @include desktop {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__text {
+    font-family: $font-inter;
+    font-size: 14px;
+    line-height: 24px;
+    color: #686868;
+
+    @include tablet {
+    }
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+  &__faq {
+    max-width: 600px;
+    margin: 0 auto;
+
+    @include tablet {}
+    @include desktop {
+      max-width: 872px;}
+  }
+}

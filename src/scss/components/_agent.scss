@@ -1,0 +1,70 @@
+.agent {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  user-select: none;
+  transition: border-color $transition-default;
+
+  &--border {
+    border-color: $color-blue;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 17px;
+    color: #A4A4A4;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    @include tablet {
+      gap: 8px;
+    }
+    @include desktop {
+      gap: 12px;
+    }
+  }
+
+  &__list-el {
+    position: relative;
+    padding-left: 24px;
+
+    &::before {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 16px;
+      height: 22px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 22' fill='none' %3E%3Cg clip-path='url(%23clip0_1_10450)'%3E%3Cpath d='M13.3333 7.00195L6.87498 19.002L3.33331 12.4213' stroke='url(%23paint0_linear_1_10450)' stroke-width='2' stroke-linecap='square' stroke-linejoin='bevel'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1_10450' x1='8.33331' y1='7.00195' x2='8.33331' y2='19.002' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%238DCBFF'/%3E%3Cstop offset='1' stop-color='%23548BFF'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_1_10450'%3E%3Crect width='16' height='16' fill='white' transform='translate(0 5.00195)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: auto;
+  }
+}

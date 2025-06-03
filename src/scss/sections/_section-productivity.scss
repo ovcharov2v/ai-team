@@ -1,0 +1,51 @@
+.section-productivity {
+  padding-top: 40px;
+  padding-bottom: 26px;
+
+  @include tablet {}
+  @include desktop {
+    padding-bottom: 62px;}
+
+  &__title-box {
+    margin-bottom: 18px;
+    text-align: center;
+
+    @include tablet {}
+    @include desktop {
+      margin-bottom: 62px;}
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    max-width: 980px;
+    margin: 0 auto;
+
+    br {
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__slider {
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__slide-img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+
+  &__slide-text {
+  }
+}

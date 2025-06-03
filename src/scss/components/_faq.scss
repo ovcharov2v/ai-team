@@ -1,0 +1,45 @@
+.faq {
+  &__elem {
+    padding-bottom: 16px;
+  }
+
+  &__elem-title {
+    position: relative;
+    padding: 16px 0 0 30px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 28px;
+      left: 0;
+      width: 16px;
+      height: 2px;
+      background-color: $color-blue;
+      content: "";
+      transition: transform $transition-default;
+    }
+
+    &::after {
+      transform: rotate(-90deg);
+    }
+
+    .faq__elem--active & {
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+  &__elem-box {
+    padding-top: 16px;
+    padding-left: 30px;
+    overflow: hidden;
+  }
+}
+

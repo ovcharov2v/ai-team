@@ -71,6 +71,7 @@
 		"core-js": "3.15.2",
 		"imask": "7.6.1",
 		"reset-css": "5.0.2",
-		"swiper": "11.1.14"
+		"slim-select": "2.11.0",
+		"swiper": "11.2.8"
 	}
 }
