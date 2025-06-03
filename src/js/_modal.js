@@ -1,7 +1,24 @@
 import IMask from "imask";
 import SlimSelect from 'slim-select';
 
+function getScrollbarWidth() {
+  const scrollDiv = document.createElement('div');
+  scrollDiv.style.width = '100px';
+  scrollDiv.style.height = '100px';
+  scrollDiv.style.overflow = 'scroll';
+  scrollDiv.style.position = 'absolute';
+  scrollDiv.style.top = '-9999px';
+  document.body.appendChild(scrollDiv);
+
+  const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+  document.body.removeChild(scrollDiv);
+
+  return scrollbarWidth;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  const scrollbarWidth = getScrollbarWidth();
+
   // Custom selects
   const selectList = document.querySelectorAll('select')
   const ssList = []
@@ -33,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error(`Модальное окно #${name} не найдено`)
         return
       }
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
       document.body.style.overflow = 'hidden'
       modal.style.display = 'flex'
       setTimeout(() => {
@@ -45,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         document.body.style.overflow = ''
         modal.style.display = ''
+        document.body.style.paddingRight = ''
       }, 300)
     }
 
