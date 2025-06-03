@@ -169,7 +169,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var slim_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slim_select__WEBPACK_IMPORTED_MODULE_1__);
 
 
+function getScrollbarWidth() {
+  var scrollDiv = document.createElement('div');
+  scrollDiv.style.width = '100px';
+  scrollDiv.style.height = '100px';
+  scrollDiv.style.overflow = 'scroll';
+  scrollDiv.style.position = 'absolute';
+  scrollDiv.style.top = '-9999px';
+  document.body.appendChild(scrollDiv);
+  var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+  document.body.removeChild(scrollDiv);
+  return scrollbarWidth;
+}
 document.addEventListener('DOMContentLoaded', function () {
+  var scrollbarWidth = getScrollbarWidth();
+
   // Custom selects
   var selectList = document.querySelectorAll('select');
   var ssList = [];
@@ -200,6 +214,9 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error("\u041C\u043E\u0434\u0430\u043B\u044C\u043D\u043E\u0435 \u043E\u043A\u043D\u043E #".concat(name, " \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u043E"));
         return;
       }
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = "".concat(scrollbarWidth, "px");
+      }
       document.body.style.overflow = 'hidden';
       modal.style.display = 'flex';
       setTimeout(function () {
@@ -211,6 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(function () {
         document.body.style.overflow = '';
         modal.style.display = '';
+        document.body.style.paddingRight = '';
       }, 300);
     };
     modalList.forEach(function (modal) {
