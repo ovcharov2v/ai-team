@@ -4,20 +4,23 @@
   align-items: center;
   padding: 12px 24px;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
+  background-color: $color-red;
+  color: #fff;
   font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
+  line-height: 1.4;
+  font-weight: 400;
   text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
   transition: background-color $transition-default, color $transition-default;
 
-  @include tablet {
-    padding-top: 17px;
-    padding-bottom: 17px;
+  &:hover {
+    background-color: darken($color-red, 10%);
   }
-  @include desktop {
+
+  @include tablet {
+    padding: 12px 24px;
   }
 
   &:disabled {
@@ -25,46 +28,19 @@
     cursor: not-allowed;
   }
 
-  &--md {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 14px;
-
-    @include tablet {
-      padding-top: 13px;
-      padding-bottom: 13px;
-    }
-    @include desktop {
-      font-size: 17px;
-    }
-  }
-
-  &--header {
+  &--sm {
     padding: 8px 16px;
 
     @include tablet {
-      padding: 12px 24px;
-    }
-    @include desktop {
-      padding: 12px 24px;
-    }
-  }
-
-  &--blue {
-    background-color: $color-blue;
-    color: #fff;
-
-    &:hover {
-      background-color: darken($color-blue, 10%);
+      padding: 10px 16px;
     }
   }
 
   &--grey {
-    background-color: #EAF3FF;
-    color: $color-text;
+    background-color: #282828;
+    color: rgba(#fff, .3);
 
     &:hover {
-      background-color: $color-blue;
       color: #fff;
     }
   }

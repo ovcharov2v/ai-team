@@ -91,7 +91,7 @@
   flex: 1 1 100%;
 
   @include tablet {
-    padding: 16px 20px;}
+    padding: 10px 20px;}
   @include desktop {}
 }
 
@@ -199,7 +199,7 @@
 }
 
 .ss-main .ss-arrow {
-  color: rgba(#151515, .5);
+  fill: rgba(#fff, .6);
   width: 18px;
   height: 18px;
   margin-right: 6px;

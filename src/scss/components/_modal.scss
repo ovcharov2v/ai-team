@@ -17,6 +17,7 @@
   @include tablet {
     padding: 112px 0 0;
   }
+
   @include desktop {
     padding: 20px;
   }
@@ -26,20 +27,24 @@
   }
 
   &__window {
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     transform: translateY(20%);
     position: relative;
     width: 100%;
     max-width: 700px;
+    min-height: 100%;
     padding: 88px 24px 24px;
-    margin: auto auto 0 ;
-    background-color: #fff;
+    margin: auto auto 0;
+    background-color: $color-bg2;
     border-radius: 24px 24px 0 0;
     transition: opacity $transition-default, transform $transition-default;
 
     @include tablet {
       padding: 88px 32px 40px;
     }
+
     @include desktop {
       transform: translateX(20%);
       margin: auto 0 auto auto;
@@ -51,39 +56,23 @@
       opacity: 1;
       transform: none;
     }
-
-    .modal--success & {
-      margin: auto !important;
-      text-align: center;
-      border-radius: 24px;
-      padding: 60px 24px 24px !important;
-
-      @include tablet {
-        transform: translateY(20%);
-        padding: 40px !important;
-      }
-      @include desktop {
-        transform: translateY(20%);
-      }
-    }
   }
+
+  &__title-box {
+    margin-bottom: 16px;}
 
   &__title {
-    margin-bottom: 24px;
-    font-size: 32px;
+    margin-bottom: 8px;
+    font-size: 24px;
     line-height: 1.4;
     font-weight: 500;
+    color: $color-text-white;
 
-    .modal--success & {
-      margin-bottom: 8px;
-    }
+    @include tablet {
+    font-size: 32px;}
   }
 
-  &__text {
-    .modal--success & {
-      margin-bottom: 24px;
-    }
-  }
+  &__text {}
 
   &__close {
     position: absolute;
@@ -94,17 +83,18 @@
     height: 40px;
     border: none;
     background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='48' height='48' rx='24' fill='%23EAF3FF'/%3E%3Cpath d='M24 25.4142L31.7782 33.1924L33.1924 31.7782L25.4142 24L33.1924 16.2218L31.7782 14.8076L24 22.5858L16.2218 14.8076L14.8076 16.2218L22.5858 24L14.8076 31.7782L16.2218 33.1924L24 25.4142Z' fill='%23151515'/%3E%3C/svg%3E");
-    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cg clip-path='url(%23clip0_2001_2171)'%3E%3Cpath d='M1.2932 26.42V5.74H6.6832V7.5H3.2732V24.66H6.6832V26.42H1.2932ZM10.8546 24L15.4746 15.86L11.0966 7.94H13.3846L15.8706 12.692C16.0026 12.9413 16.1346 13.2127 16.2666 13.506C16.4133 13.7847 16.5306 14.0047 16.6186 14.166C16.6919 14.0047 16.7946 13.7847 16.9266 13.506C17.0733 13.2127 17.2126 12.9413 17.3446 12.692L19.8746 7.94H22.0526L17.6746 15.728L22.2946 24H20.0286L17.2786 18.896C17.1466 18.6467 17.0073 18.3827 16.8606 18.104C16.7286 17.8107 16.6259 17.576 16.5526 17.4C16.4793 17.576 16.3693 17.8033 16.2226 18.082C16.0906 18.3607 15.9586 18.6247 15.8266 18.874L13.0546 24H10.8546ZM26.466 26.42V24.66H29.876V7.5H26.466V5.74H31.856V26.42H26.466Z' fill='%23FF0000'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2001_2171'%3E%3Crect width='32' height='32' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-size: 32px 32px;
     background-repeat: no-repeat;
+    background-position: center;
     transition: filter $transition-default;
 
     @include tablet {
       width: 48px;
       height: 48px;
     }
-    @include desktop {
-    }
+
+    @include desktop {}
 
     &:hover {
       filter: brightness(0.95) saturate(2.5);
@@ -119,8 +109,8 @@
     @include tablet {
       gap: 24px;
     }
-    @include desktop {
-    }
+
+    @include desktop {}
   }
 
   &__form-row {
@@ -129,25 +119,28 @@
     grid-gap: 16px;
 
     @include tablet {
-      grid-template: auto / repeat(2, minmax(0,1fr));
+      grid-template: auto / repeat(2, minmax(0, 1fr));
       grid-gap: 24px;
     }
-    @include desktop {
-    }
+
+    @include desktop {}
   }
 
   &__submit {
+    align-self: flex-start;
   }
 
   &__order-checkbox {
-    order: 1;
+    order: 2;
+
     @include tablet {
       order: unset;
     }
   }
 
   &__order-textarea {
-    order: 2;
+    order: 1;
+
     @include tablet {
       order: unset;
     }
@@ -155,8 +148,17 @@
 
   &__order-btn {
     order: 3;
+    width: 100%;
+
     @include tablet {
       order: unset;
+      width: unset;
     }
+  }
+
+  &__img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
   }
 }

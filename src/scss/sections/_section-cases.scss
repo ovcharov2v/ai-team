@@ -1,38 +1,102 @@
 .section-cases {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #DAECFF;
+  padding-top: 16px;
+  padding-bottom: 20px;
   overflow: hidden;
 
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   &__title-box {
-    margin-bottom: 40px;
-    text-align: center;
+    margin-bottom: 12px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
     margin-bottom: 8px;
+    font-size: 26px;
+    line-height: 32px;
+    color: #fff;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 44px;
+    }
   }
 
   &__text {
-    font-family: $font-inter;
     font-size: 16px;
     line-height: 24px;
-    color: #686868;
   }
 
   &__slider {
-    max-width: 1050px;
-    margin: 0 auto;
+    margin-bottom: 24px;
+
     &.swiper {
       overflow: visible;
-
-      @include desktop {
-        overflow: hidden;
-      }
     }
   }
 
   &__slide {
     height: auto;
+  }
+
+
+
+  &__form-box {
+    padding: 0 24px;
+  }
+
+  &__form-title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-text-white;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 44px;
+    }
+
+    @include desktop {}
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 482px;
+    margin-bottom: 16px;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 8px;
+      max-width: 482px;
+      margin-bottom: 18px;
+    }
+
+    @include desktop {}
+  }
+
+  &__form-group {
+    flex-grow: 1;
   }
 }

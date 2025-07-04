@@ -1,45 +1,58 @@
 .faq {
   &__elem {
-    padding-bottom: 16px;
+    padding-bottom: 18px;
+    background-color: $color-bg2;
+    border-bottom: 1px solid $color-bg;
+
+    @include tablet {
+      padding-bottom: 20px;
+    }
   }
 
   &__elem-title {
     position: relative;
-    padding: 16px 0 0 30px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
+    padding: 18px 50px 0 24px;
+    font-weight: 500;
+    color: $color-text-white;
     cursor: pointer;
 
-    &::before,
+
     &::after {
       position: absolute;
-      top: 28px;
-      left: 0;
-      width: 16px;
-      height: 2px;
-      background-color: $color-blue;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 24px;
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.4404 7.81885L12.6119 18.3892H10.8719L6 7.81885H8.56647L11.7419 15.0833L14.9174 7.81885H17.4404Z' fill='%23FF0000'/%3E%3C/svg%3E%0A");
+
       content: "";
       transition: transform $transition-default;
     }
 
-    &::after {
-      transform: rotate(-90deg);
+    .faq__elem--active & {
+      &::after {
+        transform: translateY(-50%) rotate(-180deg);
+      }
     }
 
-    .faq__elem--active & {
-      &::before {
-        transform: rotate(-45deg);
-      }
+    @include desktop {
+      padding: 20px 60px 0 30px;
+
       &::after {
-        transform: rotate(-135deg);
+        right: 30px;
       }
     }
   }
+
   &__elem-box {
-    padding-top: 16px;
-    padding-left: 30px;
+    padding: 16px 50px 0 24px;
     overflow: hidden;
+
+    @include tablet {}
+
+    @include desktop {
+      padding: 16px 60px 0 30px;
+    }
   }
 }
-

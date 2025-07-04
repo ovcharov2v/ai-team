@@ -6,17 +6,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
   if(slider) {
     new Swiper(slider, {
       modules: [Pagination],
-      slidesPerView: 1,
-      spaceBetween: 16,
+      slidesPerView: 1.3,
+      spaceBetween: 4,
       slideToClickedSlide: true,
       slideActiveClass: 'agent--border',
-      pagination: {
-        el: '.section-agents__slider .slider-dots',
-        bulletClass: 'slider-dot',
-        bulletActiveClass: 'slider-dot--active',
-        clickable: true,
-      },
       breakpoints: {
+        768: {
+          slidesPerView: 2.95,
+        },
         1024: {
           slidesPerView: 3,
         }

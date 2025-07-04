@@ -2,35 +2,32 @@
   &__input {
     display: block;
     width: 100%;
-    padding: 8px 20px;
-    font-size: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
     line-height: 1.5;
-    color: $color-black;
-    border: 1px solid #D3D3D3;
-    border-radius: 8px;
+    color: $color-text-white;
+    border: 1px solid rgba(#fff, .3);
+    background-color: rgba(#fff, .05);
+    border-radius: 4px;
     transition: border-color $transition-default;
 
-    @include tablet {
-      padding: 12px 20px;}
-    @include desktop {}
 
     &:focus {
       outline: none;
-      border-color: $color-blue;
+      border-color: #fff;
     }
 
     &::placeholder {
-      color: #626A76;
+      color: rgba(#fff, .3);
+    }
+
+    &--sm {
+      padding: 8px 10px;
     }
 
     &--textarea {
       resize: none;
       height: 118px;
-    }
-
-    @include desktop {
-      padding: px2rem(16) px2rem(20);
-      font-size: px2rem(18);
     }
 
     .form-group--error & {
@@ -49,7 +46,6 @@
     font-size: 13px;
     line-height: 1.5;
     font-weight: 500;
-    color: rgba(#151515, .5);
 
     sup {
       margin-left: 3px;

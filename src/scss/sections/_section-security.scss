@@ -1,66 +1,66 @@
 .section-security {
   padding-top: 24px;
   padding-bottom: 24px;
-  background-color: #F9F9F9;
-  border-radius: 20px;
-  overflow: hidden;
 
   @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @include desktop {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  @include desktop {
+
+  &__title-box {
+    margin-bottom: 18px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
+    @include desktop {
+      margin-bottom: 32px;
+    }
   }
 
   &__title {
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 8px;
   }
 
-  &__slider {
-    overflow: visible;
+  &__text {
+    font-weight: 300;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template: auto / 100%;
+    grid-gap: 24px;
 
     @include tablet {
-      overflow: hidden;
+      grid-template: auto / repeat(3, minmax(0, 1fr));
+      grid-gap: 32px;
     }
-    @include desktop {
-    }
+
+    @include desktop {}
   }
 
-  &__slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 16px;
-    border-radius: 8px;
-    background-color: #fff;
-    text-align: center;
+  &__item {}
 
-    @include tablet {
-      flex-direction: row;
-      background-color: transparent;
-      padding: 0;
-      border-radius: 0;
-      text-align: left;
-    }
-    @include desktop {
-      gap: 16px;
-    }
-  }
-
-  &__slide-img {
+  &__item-top {
     display: block;
-    flex-shrink: 0;
-    width: 60px;
-    height: 60px;
-
-    @include desktop {
-      width: 140px;
-      height: 140px;
-    }
+    margin-bottom: 10px;
   }
 
-  &__slide-text {
+  &__item-text {
+    font-weight: 300;
+
+    @include tablet {
+      max-width: 230px;
+    }
+
+    @include desktop {
+      max-width: 100%;
+    }
   }
 }

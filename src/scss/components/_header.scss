@@ -5,7 +5,8 @@
   left: 0;
   width: 100%;
   padding: 12px 0;
-  background-color: #fff;
+  background-color: rgba($color-bg, .8);
+  backdrop-filter: blur(15px);
 
   @include tablet {
     padding: 16px 8px;

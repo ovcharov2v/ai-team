@@ -3,16 +3,16 @@
   padding-bottom: 44px;
 
   @include tablet {
-    padding-top: 130px;
+    padding-top: 105px;
   }
+
   @include desktop {
     display: grid;
     grid-template: auto / auto 323px;
     grid-gap: 40px;
   }
 
-  &__content-col {
-  }
+  &__content-col {}
 
   &__top-box {
     display: flex;
@@ -27,12 +27,19 @@
 
   &__agent-col {
     display: none;
+
     @include desktop {
       display: block;
     }
   }
 
   &__agent {
+    flex-shrink: 0;
+
+    @include tablet {
+      max-width: 323px;
+    }
+
     @include desktop {
       position: sticky;
       top: 100px;
@@ -47,9 +54,14 @@
 
   &__title {
     margin-bottom: 40px;
-    font-size: 24px;
-    line-height: 26px;
-    font-weight: 500;
+    font-size: 28px;
+    line-height: 38px;
+    color: $color-text-white;
+
+    @include tablet {
+      font-size: 35px;
+      line-height: 44px;
+    }
   }
 
   &__logo {
@@ -61,45 +73,43 @@
     display: block;
     width: 100%;
     margin: 40px 0;
-    border-radius: 8px;
+    border-radius: 4px;
   }
 
   &__content-box {
-    max-width: 600px;
+    max-width: 670px;
 
     h2 {
       margin-top: 40px;
       margin-bottom: 20px;
       font-size: 24px;
       line-height: 26px;
-      font-weight: 500;
+      color: $color-text-white;
     }
 
     p {
 
-      & + p {
+      &+p {
         margin-top: 20px;
       }
     }
 
-    ul, ol {
+    ul,
+    ol {
       display: flex;
       flex-direction: column;
       gap: 16px;
 
       li {
         position: relative;
-        padding-left: 28px;
+        padding-left: 24px;
 
         &::before {
           position: absolute;
-          top: 8px;
-          left: 10px;
-          width: 4px;
-          height: 4px;
-          border-radius: 4px;
-          background-color: #A29CF8;
-          content: "";
+          top: -2px;
+          left: 0;
+          color: $color-red-text;
+          content: ">";
         }
       }
     }

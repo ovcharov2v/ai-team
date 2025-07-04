@@ -1,25 +1,27 @@
 .section-agents {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  background-color: #F9F9F9;
+  padding-top:40px;
+  padding-bottom: 24px;
   overflow: hidden;
 
   @include tablet {
-    padding-bottom: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
+
   @include desktop {
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   &__title-box {
     margin-bottom: 24px;
-    text-align: center;
 
     @include tablet {
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
+
     @include desktop {
-      margin-bottom: 40px;
+      margin-bottom: 34px;
     }
   }
 
@@ -27,21 +29,11 @@
     margin-bottom: 8px;
   }
 
-  &__text {
-  }
+  &__text {}
 
   &__slider {
     .swiper {
-      @include tablet {
-        max-width: 386px;
-        margin: 0 auto;
-        overflow: visible;
-      }
-
-      @include desktop {
-        max-width: 100%;
-        overflow: hidden;
-      }
+      overflow: visible;
     }
   }
 
@@ -53,6 +45,7 @@
     }
 
     @include desktop {
-      border-color: #fff;}
+      border-color: #fff;
+    }
   }
 }

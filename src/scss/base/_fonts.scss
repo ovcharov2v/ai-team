@@ -1,56 +1,40 @@
-/* manrope-regular - cyrillic_latin */
+/* jetbrains-mono-300 - cyrillic_latin */
 @font-face {
 	font-display: swap;
-	font-family: 'Manrope';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/manrope/manrope-v15-cyrillic_latin-regular.woff2') format('woff2');
-}
-/* manrope-500 - cyrillic_latin */
-@font-face {
-	font-display: swap;
-	font-family: 'Manrope';
-	font-style: normal;
-	font-weight: 500;
-	src: url('../fonts/manrope/manrope-v15-cyrillic_latin-500.woff2') format('woff2');
-}
-/* manrope-600 - cyrillic_latin */
-@font-face {
-	font-display: swap;
-	font-family: 'Manrope';
-	font-style: normal;
-	font-weight: 600;
-	src: url('../fonts/manrope/manrope-v15-cyrillic_latin-600.woff2') format('woff2');
-}
-/* inter-300 - cyrillic_latin */
-@font-face {
-	font-display: swap;
-	font-family: 'Inter';
+	font-family: 'JetBrains Mono';
 	font-style: normal;
 	font-weight: 300;
-	src: url('../fonts/inter/inter-v18-cyrillic_latin-300.woff2') format('woff2');
+	src: url('../fonts/jetbrains-mono/jetbrains-mono-v23-cyrillic_latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* inter-regular - cyrillic_latin */
+/* jetbrains-mono-regular - cyrillic_latin */
 @font-face {
 	font-display: swap;
-	font-family: 'Inter';
+	font-family: 'JetBrains Mono';
 	font-style: normal;
 	font-weight: 400;
-	src: url('../fonts/inter/inter-v18-cyrillic_latin-regular.woff2') format('woff2');
+	src: url('../fonts/jetbrains-mono/jetbrains-mono-v23-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* inter-600 - cyrillic_latin */
+/* jetbrains-mono-500 - cyrillic_latin */
 @font-face {
 	font-display: swap;
-	font-family: 'Inter';
+	font-family: 'JetBrains Mono';
 	font-style: normal;
-	font-weight: 600;
-	src: url('../fonts/inter/inter-v18-cyrillic_latin-600.woff2') format('woff2');
+	font-weight: 500;
+	src: url('../fonts/jetbrains-mono/jetbrains-mono-v23-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* roboto-flex-regular - cyrillic_latin */
+/* jetbrains-mono-700 - cyrillic_latin */
 @font-face {
 	font-display: swap;
-	font-family: 'Roboto Flex';
+	font-family: 'JetBrains Mono';
 	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/roboto-flex/roboto-flex-v27-cyrillic_latin-regular.woff2') format('woff2');
+	font-weight: 700;
+	src: url('../fonts/jetbrains-mono/jetbrains-mono-v23-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* overpass-mono-300 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Overpass Mono';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/overpass-mono/overpass-mono-v20-cyrillic_latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }

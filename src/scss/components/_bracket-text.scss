@@ -1,0 +1,11 @@
+.bracket-text {
+  color: $color-red-text;
+
+  &::before {
+    content: "[ ";
+  }
+
+  &::after {
+    content: " ]";
+  }
+}

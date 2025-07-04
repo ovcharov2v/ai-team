@@ -3,45 +3,39 @@ extends pug/base
 block content
     // Section Hero
     section.section-hero.container
-        .section-hero__box
-            .section-hero__row
-                figure.section-hero__item
-                    img.section-hero__item-img(src="./images/section-hero/img1.svg", alt="")
-                    figcaption.section-hero__item-text Изучаем текущий бизнес-процесс в котором требуется участие человека
-                figure.section-hero__item
-                    img.section-hero__item-img(src="./images/section-hero/img2.svg", alt="")
-                    figcaption.section-hero__item-text Обучаем И.И. Коллектив
-                        br
-                        |и встраиваем его в процесс
-                figure.section-hero__item
-                    img.section-hero__item-img(src="./images/section-hero/img3.svg", alt="")
-                    figcaption.section-hero__item-text И.И. Коллектив полностью берет
-                        br
-                        |
-                        |
-                        |на себя рутинные операции
-            .section-hero__content-box
-                h1.h1.section-hero__title ИИ Агенты для бизнеса
+        .section-hero__text-box
+            h1.h1.section-hero__title ИИ Агенты для бизнеса
+                br
+                span.color-red заменят людей в рутинных операциях _
+            p.section-hero__text Заменяем ручной труд с документами и освобождаем людей от рутины. Снижаем количество ошибок и ликвидируем возможность “срезать углы”. Одновременно усиливаем контроль ускоряем процессы
+        ul.section-hero__list
+            li.section-hero__item
+                span.section-hero__item-number.bracket-text 1
+                span.section-hero__item-text Изучаем текущий бизнес-процесс в котором требуется участие человека
+            li.section-hero__item
+                span.section-hero__item-number.bracket-text 2
+                span.section-hero__item-text Обучаем И.И. Коллектив и встраиваем его в процесс
+            li.section-hero__item
+                span.section-hero__item-number.bracket-text 3
+                span.section-hero__item-text И.И. Коллектив полностью берет
                     br
-                    span.color-blue заменят людей в рутинных операциях
-                p.section-hero__text Заменяем ручной труд с документами и освобождаем людей от рутины. Снижаем количество ошибок и ликвидируем возможность “срезать углы”. Одновременно усиливаем контроль ускоряем процессы
-                button.button.button--blue.section-hero__btn(type="button", data-modal="callback") Записаться на демо
+                    |
+                    |
+                    |на себя рутинные операции
+        button.button.section-hero__btn(type="button", data-modal="callback") Записаться на демо
 
     // Section Trust
     section.section-trust.container
         h2.section-trust__title Нам доверяют самые крупные компании
-        .section-trust__slider
-            .swiper
-                .swiper-wrapper
-                    .swiper-slide.section-trust__slide
-                        img.section-trust__slide-img(src="./images/section-trust/logo1.svg", alt="")
-                    .swiper-slide.section-trust__slide
-                        img.section-trust__slide-img(src="./images/section-trust/logo2.svg", alt="")
-                    .swiper-slide.section-trust__slide
-                        img.section-trust__slide-img(src="./images/section-trust/logo3.svg", alt="")
-                    .swiper-slide.section-trust__slide
-                        img.section-trust__slide-img(src="./images/section-trust/logo4.svg", alt="")
-            .slider-dots
+        .section-trust__row
+            .section-trust__img-box
+                img.section-trust__img(src="./images/section-trust/logo1.svg", alt="")
+            .section-trust__img-box
+                img.section-trust__img(src="./images/section-trust/logo2.svg", alt="")
+            .section-trust__img-box
+                img.section-trust__img(src="./images/section-trust/logo3.svg", alt="")
+            .section-trust__img-box
+                img.section-trust__img(src="./images/section-trust/logo4.svg", alt="")
 
     // Section Agents
     section.section-agents
@@ -54,65 +48,58 @@ block content
                     .swiper-wrapper
                         // slide
                         article.agent.section-agents__item.swiper-slide
-                            .agent__title ИИ-Агент Бухгалтер
-                            .agent__text Бухгалтерия и ОЦО
-                            .agent__list
+                            p.agent__text Бухгалтерия и ОЦО
+                            h3.agent__title ИИ-Агент Бухгалтер
+                            ul.agent__list
                                 li.agent__list-el Заполнит формы первичных документов
                                 li.agent__list-el Проведет инвентаризацию
                                 li.agent__list-el Выполнит сверку с контрагентами
                                 li.agent__list-el Соберет авансовые отчеты
-                            button.button.button--blue.button--md.agent__btn(type="button", data-modal="callback") Записаться на демо
+                            a.button.button--md.agent__btn(href="./case.html") Посмотреть кейс
                         // slide
                         article.agent.section-agents__item.swiper-slide
-                            .agent__title ИИ-Агент Казначей
-                            .agent__text Казначейство
-                            .agent__list
+                            p.agent__text Казначейство
+                            h3.agent__title ИИ-Агент Казначей
+                            ul.agent__list
                                 li.agent__list-el Проверит условия договора
                                 li.agent__list-el Сформирует календарь платежей
                                 li.agent__list-el Сверит данные поручения с нормативными документами
-                            button.button.button--blue.button--md.agent__btn(type="button", data-modal="callback") Записаться на демо
+                            a.button.button--md.agent__btn(href="./case.html") Посмотреть кейс
                         // slide
                         article.agent.section-agents__item.swiper-slide
-                            .agent__title ИИ-Агент Менеджер
-                            .agent__text Планирование и контроль
-                            .agent__list
+                            p.agent__text Планирование и контроль
+                            h3.agent__title ИИ-Агент Менеджер
+                            ul.agent__list
                                 li.agent__list-el Нормализует НСИ и поможет с закупками
                                 li.agent__list-el Сверит тендерную заявку с условиями
                                 li.agent__list-el Поможет с претензионной работой
-                            button.button.button--blue.button--md.agent__btn(type="button", data-modal="callback") Записаться на демо
-                .slider-dots
+                            a.button.button--md.agent__btn(href="./case.html") Посмотреть кейс
 
     // Section Productivity
     section.section-productivity.container
-        .section-productivity__title-box
-            h2.h2.section-productivity__title Обеспечиваем реальный экономический эффект и повышаем производительность
-            p.section-productivity__text Агенты  И.И. Коллектива полностью заменяют людей в рутинных операциях
-                br
-                |
-                |Колективу не нужно платить и он всегда готов работать ночью Вы сможете контролировать все шаги процессов за счет внедрения ИИ-контролеров
-        .section-productivity__slider
-            .swiper
-                .swiper-wrapper
-                    // slide
-                    figure.section-productivity__slide.swiper-slide
-                        img.section-productivity__slide-img(src="./images/section-productivity/img1.svg", alt="")
-                        figcaption.section-productivity__slide-text Задача, которая не поддается классической автоматизации потому что требует понимания смысла написанного текста
-                    // slide
-                    figure.section-productivity__slide.swiper-slide
-                        img.section-productivity__slide-img(src="./images/section-productivity/img2.svg", alt="")
-                        figcaption.section-productivity__slide-text Наши LLM и VLM модели научились понимать смысл инструкций и документов и могут выполнять роль человека
-                    // slide
-                    figure.section-productivity__slide.swiper-slide
-                        img.section-productivity__slide-img(src="./images/section-productivity/img3.svg", alt="")
-                        figcaption.section-productivity__slide-text Интеграции и RPA могут выполнять роль "рук" и работать вместо человека.
-            .slider-dots
+        .section-productivity__grid
+            .section-productivity__content
+                h2.h2.section-productivity__title Обеспечиваем реальный экономический эффект и повышаем производительность
+                p.section-productivity__text Агенты  И.И. Коллектива полностью заменяют людей в рутинных операциях. Колективу не нужно платить и он всегда готов работать ночью. Вы сможете контролировать все шаги процессов за счет внедрения ИИ-контролеров
+            ul.section-productivity__list
+                li.section-productivity__item
+                    span.section-productivity__item-num.bracket-text Проблема
+                    span.section-productivity__item-text В крупном бизнесе всегда есть множество задач, которые не поддается классической автоматизации потому что требует понимания смысла написанного текста и контекста применения.
+                li.section-productivity__item
+                    span.section-productivity__item-num.bracket-text Решение
+                    span.section-productivity__item-text Современные LLM и VLM модели научились понимать смысл инструкций и документов и могут выполнять роль человека при решение подобного рода задач.
+                        br
+                        |Мы являемся экспертами в применении таких моделей.
+                li.section-productivity__item
+                    span.section-productivity__item-num.bracket-text Результат
+                    span.section-productivity__item-text Различный интеграции и RPA могут дополнять LLM и VLM и выполнять роль "рук", что позволяет исключить человеческий фактор.
 
     // Section Cases
     section.section-cases
         .container
             .section-cases__title-box
-                h2.h2.section-cases__title Бизнес-применения и кейсы
-                p.section-cases__text Примеры работы агентов в работе
+                h2.section-cases__title Бизнес-применения и кейсы
+                p.section-cases__text Примеры работы агентов в работе
             .section-cases__slider.swiper
                 .swiper-wrapper
                     // slide
@@ -120,87 +107,113 @@ block content
                         .case__logo-box
                             img.case__logo(src="./images/section-trust/logo1.svg", alt="")
                         h3.case__title Автоматические акты сверки
-                        p.case__text Поступила задача - автоматически проверять акты сверки. Коллектив не растерялся и смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
-                        a.case__link(href="./case.html") Подробнее
+                        p.case__text Поступила задача - автоматически проверять акты сверки. Коллектив не растерялся и смог успешно справиться с финансовыми вызовами, основываясь на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
+                        a.button.case__link(href="./case.html") Подробнее
                     // slide
                     article.case.section-cases__slide.swiper-slide
                         .case__logo-box
                             img.case__logo(src="./images/section-trust/logo3.svg", alt="")
                         h3.case__title Анализ КС-2
-                        p.case__text Руководство попросило провести анализ. Коллектив смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
-                        a.case__link(href="./case.html") Подробнее
+                        p.case__text Руководство попросило провести анализ. Коллектив смог успешно справиться с финансовыми вызовами, основываясь на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
+                        a.button.case__link(href="./case.html") Подробнее
                     // slide
                     article.case.section-cases__slide.swiper-slide
                         .case__logo-box
                             img.case__logo(src="./images/section-trust/logo3.svg", alt="")
                         h3.case__title Анализ КС-2
-                        p.case__text Руководство попросило провести анализ. Коллектив смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
-                        a.case__link(href="./case.html") Подробнее
+                        p.case__text Руководство попросило провести анализ. Коллектив смог успешно справиться с финансовыми вызовами, основываясь на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
+                        a.button.case__link(href="./case.html") Подробнее
+                    // slide
+                    article.case.section-cases__slide.swiper-slide
+                        .case__logo-box
+                            img.case__logo(src="./images/section-trust/logo3.svg", alt="")
+                        h3.case__title Анализ КС-2
+                        p.case__text Руководство попросило провести анализ. Коллектив смог успешно справиться с финансовыми вызовами, основываясь на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.
+                        a.button.case__link(href="./case.html") Подробнее
+
+            // form
+            .section-cases__form-box
+                h3.section-cases__form-title Подпишитесь, чтобы не пропустить новые кейсы
+                form.section-cases__form
+                    .section-cases__form-row
+                        // form-group
+                        .form-group.form-group--required.section-cases__form-group
+                            input.form-group__input.form-group__input--sm#email(type="email", name="email", placeholder="E-mail")
+                            span.form-group__error Обязательное поле
+                        button.button.button--sm(type="submit") Подписаться
+                    label.checkbox
+                        input.checkbox__input(type="checkbox", name="agreement", value="agree", checked)
+                        span.checkbox__label Соглашаюсь с
+                            |
+                            |
+                            a(href="#", target="_blank", rel="nofollow") условиями и правилами
+                            |
+                            |
+                            |обработки персональных данных
 
     // Section Result
     section.section-result.container
         .section-result__title-box
-            h2.h2.section-result__title Агенты коллектива на больших объемах документов обеспечивают более точный результат чем операторы
+            h2.h2.section-result__title Агенты коллектива на больших объемах документов обеспечивают более точный результат чем операторы
             p.section-result__text ИИ-агенты не замыливают глаз, всегда сосредоточены и способны самостоятельно проверить результат по 5 характеристикам качества
-        .section-result__slider
-            .swiper
-                .swiper-wrapper
-                    // slide
-                    figure.section-result__slide.swiper-slide
-                        img.section-result__slide-img(src="./images/section-result/img1.svg", alt="")
-                        figcaption.section-result__slide-text Точность получения данных из договорных документов
-                    // slide
-                    figure.section-result__slide.swiper-slide
-                        img.section-result__slide-img(src="./images/section-result/img2.svg", alt="")
-                        figcaption.section-result__slide-text Покрытие процессов выборочными проверками
-                    // slide
-                    figure.section-result__slide.swiper-slide
-                        img.section-result__slide-img(src="./images/section-result/img3.svg", alt="")
-                        figcaption.section-result__slide-text Нормализованных НСИ постоянно
-            .slider-dots
+        .section-result__grid            
+            // item
+            .section-result__item
+                .section-result__item-top 
+                    .section-result__item-ai 
+                        span.section-result__item-value 95%
+                        span.section-result__item-description ИИ коллектив
+                    .section-result__item-human 
+                        span.section-result__item-value 80%
+                        span.section-result__item-description человек
+                p.section-result__item-text Точность получения данных из договорных документов
+            // item
+            .section-result__item
+                .section-result__item-top 
+                    .section-result__item-ai 
+                        span.section-result__item-value 100%
+                        span.section-result__item-description ИИ коллектив
+                    .section-result__item-human 
+                        span.section-result__item-value 10%
+                        span.section-result__item-description человек                    
+                p.section-result__item-text Покрытие процессов выборочными проверками
+            // item
+            .section-result__item
+                .section-result__item-top
+                    .section-result__item-ai 
+                            span.section-result__item-value 100%
+                            span.section-result__item-description ИИ коллектив
+                p.section-result__item-text Нормализованных НСИ постоянно
+
 
     // Section Security
-    section.section-security
-        .container
-            h2.h2.section-security__title Обеспечим полную
-                |
-                |
-                span.color-blue безопасность данных
-                |
-                |
-                | и развернем решение в вашей локальной сети или в нашем защищенном сегменте, созданном специально для вас
-            .section-security__slider.swiper
-                .swiper-wrapper
-                    // slide
-                    figure.section-security__slide.swiper-slide
-                        img.section-security__slide-img(src="./images/section-security/img1.svg", alt="")
-                        figcaption.section-security__slide-text Политики хранения
-                            br
-                            |данных
-                    // slide
-                    figure.section-security__slide.swiper-slide
-                        img.section-security__slide-img(src="./images/section-security/img2.svg", alt="")
-                        figcaption.section-security__slide-text Не нужен доступ
-                            br
-                            |к облачным ИИ
-                    // slide
-                    figure.section-security__slide.swiper-slide
-                        img.section-security__slide-img(src="./images/section-security/img3.svg", alt="")
-                        figcaption.section-security__slide-text Модель не запоминает
-                            br
-                            |ваши данные
+    section.section-security.container
+        .section-security__title-box
+            h2.h2.section-security__title Ваши данные в безопасности
+            p.section-security__text Развернем решение в вашей локальной сети или в нашем защищенном сегменте, созданном специально для вас
+        .section-security__grid
+            // item
+            .section-security__slide
+                span.section-security__item-top.bracket-text ✓
+                p.section-security__item-text Соответствие стандартам безопасности
+            // item
+            .section-security__slide
+                span.section-security__item-top.bracket-text ✓
+                p.section-security__item-text Не нужен доступ к облачным ИИ
+            // item
+            .section-security__slide
+                span.section-security__item-top.bracket-text ✓
+                p.section-security__item-text Модель не запоминает ваши данные
 
     // Section Registry
     section.section-registry
         .container
             .section-registry__box
-                h2.h2.section-registry__title Платформа включена в реестр российского ПО
-                .section-registry__text-box
-                    +picture("section-registry/emblem").section-registry__img
-                    p.section-registry__text Платформа КОЛЛЕКТИВ создана полностью на базе открытого программного обеспечения и Российских разработок.
-                        br
-                        |Мы не используем лицензии третьих сторон.
-                p.section-registry__note Мы защищаем персональные данные и готовы к аттестации рещения по ФЗ 152
+                +picture("section-registry/emblem").section-registry__img
+                .section-registry__text-box                    
+                    h2.section-registry__title Платформа включена в реестр российского ПО
+                    p.section-registry__text Платформа КОЛЛЕКТИВ создана полностью на базе открытого программного обеспечения и Российских разработок. Мы не используем лицензии третьих сторон.
+                    p.section-registry__note Мы защищаем персональные данные и готовы к аттестации рещения по ФЗ 152
 
     // Section Faq
     section.section-faq.container
@@ -208,29 +221,29 @@ block content
             h2.h2.section-faq__title Часто задаваемые вопросы
             p.section-faq__text О ИИ-агентах и платформе
         .section-faq__faq.faq
-          -
-              var faqList = [
-                  "Что нужно для того чтобы IT-служба развернула решение?",
-                  "Можете ли вы поставить решение в виде ПАК?",
-                  "Кто обучит наших специалистов?",
-                  "Какая лицензионная политика у платформы?",
-                  "Как мы будем контролировать работу ИИ-агентов?",
-                  "Какие интеграции с нашими системами нужны для работы?",
-                  "У нас нет своих GPU, как внедрять платформу?",
-                  "За счет чего обеспечивается безопасность чувствительных данных?",
-                  "Можно ли не передавать никаких данных в ваш ЦОД в варианте гибридного развертывания?",
-              ]
-          each title in faqList
-              // elem
-              .faq__elem
-                  p.faq__elem-title= title
-                  .faq__elem-box
-                      p Коллектив придает первостепенное значение безопасности, внедряя строгие меры контроля за обработкой данных, обеспечивая безопасное соединение с базами данных и предоставляя механизмы для пользователей, позволяющие реализовать их права в соответствии с GDPR. Эта приверженность также распространяется на защиту конфиденциальных медицинских данных в соответствии с HIPAA.
+            -
+                var faqList = [
+                    "Что нужно для того чтобы IT-служба развернула решение?",
+                    "Можете ли вы поставить решение в виде ПАК?",
+                    "Кто обучит наших специалистов?",
+                    "Какая лицензионная политика у платформы?",
+                    "Как мы будем контролировать работу ИИ-агентов?",
+                    "Какие интеграции с нашими системами нужны для работы?",
+                    "У нас нет своих GPU, как внедрять платформу?",
+                    "За счет чего обеспечивается безопасность чувствительных данных?",
+                    "Можно ли не передавать никаких данных в ваш ЦОД в варианте гибридного развертывания?",
+                ]
+            each title in faqList
+                // elem
+                .faq__elem
+                    p.faq__elem-title= title
+                    .faq__elem-box
+                        p Коллектив придает первостепенное значение безопасности, внедряя строгие меры контроля за обработкой данных, обеспечивая безопасное соединение с базами данных и предоставляя механизмы для пользователей, позволяющие реализовать их права в соответствии с GDPR. Эта приверженность также распространяется на защиту конфиденциальных медицинских данных в соответствии с HIPAA.
 
     // Section Call
     section.section-call.container
         .section-call__box
-            h2.h2.section-call__title Давайте обсудим пилотный проект
+            h2.section-call__title Давайте обсудим пилотный проект
             p.section-call__subtitle Ответим на все вопросы на звонке
-            p.section-call__text Для того чтобы убедится что ИИ сможет обрабатывать ваши данные и документы, мы прелагаем сделать бесплатный пилотный проект с демонтсрацией критичных для вас моментов технологии
-            button.button.button--blue.section-call__btn(type="button", data-modal="callback") Связаться с нами
+            p.section-call__text Для того чтобы удедится что ИИ сможет обрабатывать ваши данные и документы, мы прелагаем сделать бесплатный пилотный проект с демонтсрацией критичных для вас моментов технологии
+            button.button.section-call__btn(type="button", data-modal="callback") Связаться с нами

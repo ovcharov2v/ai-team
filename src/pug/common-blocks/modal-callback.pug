@@ -2,7 +2,8 @@ mixin modalCallback()
     .modal.modal--callback#modal-callback
         .modal__window
             button.modal__close(type="button", aria-label="Закрыть")
-            h2.modal__title Напишите нам
+            .modal__title-box
+                h2.modal__title Напишите нам
             form.modal__form(action="/")
                 // form-group
                 .form-group.form-group--required
@@ -48,7 +49,7 @@ mixin modalCallback()
                     span.form-group__error Обязательное поле
 
                 label.checkbox.modal__order-checkbox
-                    input.checkbox__input(type="checkbox", name="agreement", value="agree")
+                    input.checkbox__input(type="checkbox", name="agreement", value="agree", checked)
                     span.checkbox__label Соглашаюсь с
                         |
                         |
@@ -56,6 +57,5 @@ mixin modalCallback()
                         |
                         |
                         |обработки персональных данных
-                .modal__form-row.modal__order-btn
-                    div
-                    button.button.button--grey.modal__submit(type="submit") Отправить
+                
+                button.button.modal__submit.modal__order-btn(type="submit") Отправить

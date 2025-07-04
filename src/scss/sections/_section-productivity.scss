@@ -1,51 +1,53 @@
 .section-productivity {
-  padding-top: 40px;
+  padding-top: 24px;
   padding-bottom: 26px;
 
-  @include tablet {}
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
   @include desktop {
-    padding-bottom: 62px;}
+    padding-bottom: 62px;
+  }
 
-  &__title-box {
-    margin-bottom: 18px;
-    text-align: center;
+  &__grid {
+    @include tablet {
+      display: grid;
+      grid-template: auto / repeat(2, minmax(0, 1fr));
+      grid-gap: 40px;
+    }
 
-    @include tablet {}
-    @include desktop {
-      margin-bottom: 62px;}
+    @include desktop {}
+
+  }
+
+  &__content {
+    margin-bottom: 24px;
+
+    @include tablet {margin-bottom: 0;}
   }
 
   &__title {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 
-  &__text {
-    max-width: 980px;
-    margin: 0 auto;
+  &__text {}
 
-    br {
-      @include desktop {
-        display: none;
-      }
-    }
-  }
-
-  &__slider {
-  }
-
-  &__slide {
+  &__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 32px;
   }
 
-  &__slide-img {
+  &__item {}
+
+  &__item-num {
     display: block;
-    max-width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
-  &__slide-text {
+  &__item-text {
+    display: block;
   }
 }

@@ -1,14 +1,10 @@
 .footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 24px;
+  padding-bottom: 32px;
 
   @include tablet {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  @include desktop {
-    padding-left: 0;
-    padding-right: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   &__container {
@@ -19,16 +15,16 @@
     @include tablet {
       display: block;
     }
-    @include desktop {
-    }
+
+    @include desktop {}
   }
 
   &__logo-link {
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 
     @include tablet {
-      margin-bottom: 6px;
+      margin-bottom: 12px;
     }
   }
 
@@ -43,25 +39,21 @@
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-    font-family: $font-inter;
     font-size: 12px;
-    line-height: 19px;
+    font-weight: 400;
 
     @include tablet {
       flex-direction: row;
     }
   }
 
-  &__text {
-    color: #1D1D1D;
-  }
+  &__text {}
 
   &__link {
-    color: #1D1D1D;
     transition: color $transition-default;
 
     &:hover {
-      color: $color-blue;
+      color: $color-red-text;
     }
   }
 }
