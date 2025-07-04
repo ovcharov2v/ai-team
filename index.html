@@ -8,53 +8,38 @@
 		<title>ИИ Коллектив</title>
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-		<link rel="stylesheet" href="./css/main.css?v=1748912480622">
+		<link rel="stylesheet" href="./css/main.css?v=1751665985871">
 	</head>
 	<body>
 		<header class="header">
-			<div class="container header__container"><a class="header__logo-link" href="/" title="На главную"><img class="header__logo" src="./images/logo-blue.svg" alt="ИИ Коллектив"/></a>
-				<button class="button button--blue header__btn header__btn--desktop" type="button" data-modal="callback">Записаться на демо</button>
-				<button class="button button--blue button--header header__btn header__btn--mobile" type="button" data-modal="callback">Заказать демо</button>
+			<div class="container header__container"><a class="header__logo-link" href="/" title="На главную"><img class="header__logo" src="./images/logo.svg" alt="ИИ Коллектив"/></a>
+				<button class="button button--sm" type="button" data-modal="callback">Записаться на демо</button>
 			</div>
 		</header>
 		<main class="main">
 			<!-- Section Hero-->
 			<section class="section-hero container">
-				<div class="section-hero__box">
-					<div class="section-hero__row">
-						<figure class="section-hero__item"><img class="section-hero__item-img" src="./images/section-hero/img1.svg" alt="">
-							<figcaption class="section-hero__item-text">Изучаем текущий бизнес-процесс в котором требуется участие человека</figcaption>
-						</figure>
-						<figure class="section-hero__item"><img class="section-hero__item-img" src="./images/section-hero/img2.svg" alt="">
-							<figcaption class="section-hero__item-text">Обучаем И.И. Коллектив<br>и встраиваем его в процесс</figcaption>
-						</figure>
-						<figure class="section-hero__item"><img class="section-hero__item-img" src="./images/section-hero/img3.svg" alt="">
-							<figcaption class="section-hero__item-text">И.И. Коллектив полностью берет<br>
-								
-								на себя рутинные операции
-							</figcaption>
-						</figure>
-					</div>
-					<div class="section-hero__content-box">
-						<h1 class="h1 section-hero__title">ИИ Агенты для бизнеса<br><span class="color-blue">заменят людей в рутинных операциях</span></h1>
-						<p class="section-hero__text">Заменяем ручной труд с документами и освобождаем людей от рутины. Снижаем количество ошибок и ликвидируем возможность “срезать углы”. Одновременно усиливаем контроль ускоряем процессы</p>
-						<button class="button button--blue section-hero__btn" type="button" data-modal="callback">Записаться на демо</button>
-					</div>
+				<div class="section-hero__text-box">
+					<h1 class="h1 section-hero__title">ИИ Агенты для бизнеса<br><span class="color-red">заменят людей в рутинных операциях _</span></h1>
+					<p class="section-hero__text">Заменяем ручной труд с документами и освобождаем людей от рутины. Снижаем количество ошибок и ликвидируем возможность “срезать углы”. Одновременно усиливаем контроль ускоряем процессы</p>
 				</div>
+				<ul class="section-hero__list">
+					<li class="section-hero__item"><span class="section-hero__item-number bracket-text">1</span><span class="section-hero__item-text">Изучаем текущий бизнес-процесс в котором требуется участие человека</span></li>
+					<li class="section-hero__item"><span class="section-hero__item-number bracket-text">2</span><span class="section-hero__item-text">Обучаем И.И. Коллектив и встраиваем его в процесс</span></li>
+					<li class="section-hero__item"><span class="section-hero__item-number bracket-text">3</span><span class="section-hero__item-text">И.И. Коллектив полностью берет<br>
+							
+							на себя рутинные операции</span></li>
+				</ul>
+				<button class="button section-hero__btn" type="button" data-modal="callback">Записаться на демо</button>
 			</section>
 			<!-- Section Trust-->
 			<section class="section-trust container">
 				<h2 class="section-trust__title">Нам доверяют самые крупные компании</h2>
-				<div class="section-trust__slider">
-					<div class="swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide section-trust__slide"><img class="section-trust__slide-img" src="./images/section-trust/logo1.svg" alt=""></div>
-							<div class="swiper-slide section-trust__slide"><img class="section-trust__slide-img" src="./images/section-trust/logo2.svg" alt=""></div>
-							<div class="swiper-slide section-trust__slide"><img class="section-trust__slide-img" src="./images/section-trust/logo3.svg" alt=""></div>
-							<div class="swiper-slide section-trust__slide"><img class="section-trust__slide-img" src="./images/section-trust/logo4.svg" alt=""></div>
-						</div>
-					</div>
-					<div class="slider-dots"></div>
+				<div class="section-trust__row">
+					<div class="section-trust__img-box"><img class="section-trust__img" src="./images/section-trust/logo1.svg" alt=""></div>
+					<div class="section-trust__img-box"><img class="section-trust__img" src="./images/section-trust/logo2.svg" alt=""></div>
+					<div class="section-trust__img-box"><img class="section-trust__img" src="./images/section-trust/logo3.svg" alt=""></div>
+					<div class="section-trust__img-box"><img class="section-trust__img" src="./images/section-trust/logo4.svg" alt=""></div>
 				</div>
 			</section>
 			<!-- Section Agents-->
@@ -69,78 +54,60 @@
 							<div class="swiper-wrapper">
 								<!-- slide-->
 								<article class="agent section-agents__item swiper-slide">
-									<div class="agent__title">ИИ-Агент Бухгалтер</div>
-									<div class="agent__text">Бухгалтерия и ОЦО</div>
-									<div class="agent__list">
+									<p class="agent__text">Бухгалтерия и ОЦО</p>
+									<h3 class="agent__title">ИИ-Агент Бухгалтер</h3>
+									<ul class="agent__list">
 										<li class="agent__list-el">Заполнит формы первичных документов</li>
 										<li class="agent__list-el">Проведет инвентаризацию</li>
 										<li class="agent__list-el">Выполнит сверку с контрагентами</li>
 										<li class="agent__list-el">Соберет авансовые отчеты</li>
-									</div>
-									<button class="button button--blue button--md agent__btn" type="button" data-modal="callback">Записаться на демо</button>
+									</ul><a class="button button--md agent__btn" href="./case.html">Посмотреть кейс</a>
 								</article>
 								<!-- slide-->
 								<article class="agent section-agents__item swiper-slide">
-									<div class="agent__title">ИИ-Агент Казначей</div>
-									<div class="agent__text">Казначейство</div>
-									<div class="agent__list">
+									<p class="agent__text">Казначейство</p>
+									<h3 class="agent__title">ИИ-Агент Казначей</h3>
+									<ul class="agent__list">
 										<li class="agent__list-el">Проверит условия договора</li>
 										<li class="agent__list-el">Сформирует календарь платежей</li>
 										<li class="agent__list-el">Сверит данные поручения с нормативными документами</li>
-									</div>
-									<button class="button button--blue button--md agent__btn" type="button" data-modal="callback">Записаться на демо</button>
+									</ul><a class="button button--md agent__btn" href="./case.html">Посмотреть кейс</a>
 								</article>
 								<!-- slide-->
 								<article class="agent section-agents__item swiper-slide">
-									<div class="agent__title">ИИ-Агент Менеджер</div>
-									<div class="agent__text">Планирование и контроль</div>
-									<div class="agent__list">
+									<p class="agent__text">Планирование и контроль</p>
+									<h3 class="agent__title">ИИ-Агент Менеджер</h3>
+									<ul class="agent__list">
 										<li class="agent__list-el">Нормализует НСИ и поможет с закупками</li>
 										<li class="agent__list-el">Сверит тендерную заявку с условиями</li>
 										<li class="agent__list-el">Поможет с претензионной работой</li>
-									</div>
-									<button class="button button--blue button--md agent__btn" type="button" data-modal="callback">Записаться на демо</button>
+									</ul><a class="button button--md agent__btn" href="./case.html">Посмотреть кейс</a>
 								</article>
 							</div>
 						</div>
-						<div class="slider-dots"></div>
 					</div>
 				</div>
 			</section>
 			<!-- Section Productivity-->
 			<section class="section-productivity container">
-				<div class="section-productivity__title-box">
-					<h2 class="h2 section-productivity__title">Обеспечиваем реальный экономический эффект и повышаем производительность</h2>
-					<p class="section-productivity__text">Агенты  И.И. Коллектива полностью заменяют людей в рутинных операциях<br>
-						Колективу не нужно платить и он всегда готов работать ночью Вы сможете контролировать все шаги процессов за счет внедрения ИИ-контролеров
-					</p>
-				</div>
-				<div class="section-productivity__slider">
-					<div class="swiper">
-						<div class="swiper-wrapper">
-							<!-- slide-->
-							<figure class="section-productivity__slide swiper-slide"><img class="section-productivity__slide-img" src="./images/section-productivity/img1.svg" alt="">
-								<figcaption class="section-productivity__slide-text">Задача, которая не поддается классической автоматизации потому что требует понимания смысла написанного текста</figcaption>
-							</figure>
-							<!-- slide-->
-							<figure class="section-productivity__slide swiper-slide"><img class="section-productivity__slide-img" src="./images/section-productivity/img2.svg" alt="">
-								<figcaption class="section-productivity__slide-text">Наши LLM и VLM модели научились понимать смысл инструкций и документов и могут выполнять роль человека</figcaption>
-							</figure>
-							<!-- slide-->
-							<figure class="section-productivity__slide swiper-slide"><img class="section-productivity__slide-img" src="./images/section-productivity/img3.svg" alt="">
-								<figcaption class="section-productivity__slide-text">Интеграции и RPA могут выполнять роль "рук" и работать вместо человека.</figcaption>
-							</figure>
-						</div>
+				<div class="section-productivity__grid">
+					<div class="section-productivity__content">
+						<h2 class="h2 section-productivity__title">Обеспечиваем реальный экономический эффект и повышаем производительность</h2>
+						<p class="section-productivity__text">Агенты  И.И. Коллектива полностью заменяют людей в рутинных операциях. Колективу не нужно платить и он всегда готов работать ночью. Вы сможете контролировать все шаги процессов за счет внедрения ИИ-контролеров</p>
 					</div>
-					<div class="slider-dots"></div>
+					<ul class="section-productivity__list">
+						<li class="section-productivity__item"><span class="section-productivity__item-num bracket-text">Проблема</span><span class="section-productivity__item-text">В крупном бизнесе всегда есть множество задач, которые не поддается классической автоматизации потому что требует понимания смысла написанного текста и контекста применения.</span></li>
+						<li class="section-productivity__item"><span class="section-productivity__item-num bracket-text">Решение</span><span class="section-productivity__item-text">Современные LLM и VLM модели научились понимать смысл инструкций и документов и могут выполнять роль человека при решение подобного рода задач.<br>Мы являемся экспертами в применении таких моделей.</span></li>
+						<li class="section-productivity__item"><span class="section-productivity__item-num bracket-text">Результат</span><span class="section-productivity__item-text">Различный интеграции и RPA могут дополнять LLM и VLM и выполнять роль "рук", что позволяет исключить человеческий фактор.</span></li>
+					</ul>
 				</div>
 			</section>
 			<!-- Section Cases-->
 			<section class="section-cases">
 				<div class="container">
 					<div class="section-cases__title-box">
-						<h2 class="h2 section-cases__title">Бизнес-применения и кейсы</h2>
-						<p class="section-cases__text">Примеры работы агентов в работе</p>
+						<h2 class="section-cases__title">Бизнес-применения и кейсы</h2>
+						<p class="section-cases__text">Примеры работы агентов в работе</p>
 					</div>
 					<div class="section-cases__slider swiper">
 						<div class="swiper-wrapper">
@@ -148,74 +115,100 @@
 							<article class="case section-cases__slide swiper-slide">
 								<div class="case__logo-box"><img class="case__logo" src="./images/section-trust/logo1.svg" alt=""></div>
 								<h3 class="case__title">Автоматические акты сверки</h3>
-								<p class="case__text">Поступила задача - автоматически проверять акты сверки. Коллектив не растерялся и смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.</p><a class="case__link" href="./case.html">Подробнее</a>
+								<p class="case__text">Поступила задача - автоматически проверять акты сверки. Коллектив не растерялся и смог успешно справиться с финансовыми вызовами, основываясь на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.</p><a class="button case__link" href="./case.html">Подробнее</a>
 							</article>
 							<!-- slide-->
 							<article class="case section-cases__slide swiper-slide">
 								<div class="case__logo-box"><img class="case__logo" src="./images/section-trust/logo3.svg" alt=""></div>
 								<h3 class="case__title">Анализ КС-2</h3>
-								<p class="case__text">Руководство попросило провести анализ. Коллектив смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.</p><a class="case__link" href="./case.html">Подробнее</a>
+								<p class="case__text">Руководство попросило провести анализ. Коллектив смог успешно справиться с финансовыми вызовами, основываясь на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.</p><a class="button case__link" href="./case.html">Подробнее</a>
 							</article>
 							<!-- slide-->
 							<article class="case section-cases__slide swiper-slide">
 								<div class="case__logo-box"><img class="case__logo" src="./images/section-trust/logo3.svg" alt=""></div>
 								<h3 class="case__title">Анализ КС-2</h3>
-								<p class="case__text">Руководство попросило провести анализ. Коллектив смог успешно справиться  с финансовыми вызовами, основываясь  на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.</p><a class="case__link" href="./case.html">Подробнее</a>
+								<p class="case__text">Руководство попросило провести анализ. Коллектив смог успешно справиться с финансовыми вызовами, основываясь на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.</p><a class="button case__link" href="./case.html">Подробнее</a>
+							</article>
+							<!-- slide-->
+							<article class="case section-cases__slide swiper-slide">
+								<div class="case__logo-box"><img class="case__logo" src="./images/section-trust/logo3.svg" alt=""></div>
+								<h3 class="case__title">Анализ КС-2</h3>
+								<p class="case__text">Руководство попросило провести анализ. Коллектив смог успешно справиться с финансовыми вызовами, основываясь на принципах разумного управления ресурсами и постоянного мониторинга финансового состояния.</p><a class="button case__link" href="./case.html">Подробнее</a>
 							</article>
 						</div>
+					</div>
+					<!-- form-->
+					<div class="section-cases__form-box">
+						<h3 class="section-cases__form-title">Подпишитесь, чтобы не пропустить новые кейсы</h3>
+						<form class="section-cases__form">
+							<div class="section-cases__form-row">
+								<!-- form-group-->
+								<div class="form-group form-group--required section-cases__form-group">
+									<input class="form-group__input form-group__input--sm" id="email" type="email" name="email" placeholder="E-mail"><span class="form-group__error">Обязательное поле</span>
+								</div>
+								<button class="button button--sm" type="submit">Подписаться</button>
+							</div>
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="agreement" value="agree" checked><span class="checkbox__label">
+									Соглашаюсь с
+									<a href="#" target="_blank" rel="nofollow">условиями и правилами</a>
+									
+									обработки персональных данных</span>
+							</label>
+						</form>
 					</div>
 				</div>
 			</section>
 			<!-- Section Result-->
 			<section class="section-result container">
 				<div class="section-result__title-box">
-					<h2 class="h2 section-result__title">Агенты коллектива на больших объемах документов обеспечивают более точный результат чем операторы</h2>
+					<h2 class="h2 section-result__title">Агенты коллектива на больших объемах документов обеспечивают более точный результат чем операторы</h2>
 					<p class="section-result__text">ИИ-агенты не замыливают глаз, всегда сосредоточены и способны самостоятельно проверить результат по 5 характеристикам качества</p>
 				</div>
-				<div class="section-result__slider">
-					<div class="swiper">
-						<div class="swiper-wrapper">
-							<!-- slide-->
-							<figure class="section-result__slide swiper-slide"><img class="section-result__slide-img" src="./images/section-result/img1.svg" alt="">
-								<figcaption class="section-result__slide-text">Точность получения данных из договорных документов</figcaption>
-							</figure>
-							<!-- slide-->
-							<figure class="section-result__slide swiper-slide"><img class="section-result__slide-img" src="./images/section-result/img2.svg" alt="">
-								<figcaption class="section-result__slide-text">Покрытие процессов выборочными проверками</figcaption>
-							</figure>
-							<!-- slide-->
-							<figure class="section-result__slide swiper-slide"><img class="section-result__slide-img" src="./images/section-result/img3.svg" alt="">
-								<figcaption class="section-result__slide-text">Нормализованных НСИ постоянно</figcaption>
-							</figure>
+				<div class="section-result__grid">           
+					<!-- item-->
+					<div class="section-result__item">
+						<div class="section-result__item-top"> 
+							<div class="section-result__item-ai"> <span class="section-result__item-value">95%</span><span class="section-result__item-description">ИИ коллектив</span></div>
+							<div class="section-result__item-human"> <span class="section-result__item-value">80%</span><span class="section-result__item-description">человек</span></div>
 						</div>
+						<p class="section-result__item-text">Точность получения данных из договорных документов</p>
 					</div>
-					<div class="slider-dots"></div>
+					<!-- item-->
+					<div class="section-result__item">
+						<div class="section-result__item-top"> 
+							<div class="section-result__item-ai"> <span class="section-result__item-value">100%</span><span class="section-result__item-description">ИИ коллектив</span></div>
+							<div class="section-result__item-human"> <span class="section-result__item-value">10%</span><span class="section-result__item-description">человек                    </span></div>
+						</div>
+						<p class="section-result__item-text">Покрытие процессов выборочными проверками</p>
+					</div>
+					<!-- item-->
+					<div class="section-result__item">
+						<div class="section-result__item-top">
+							<div class="section-result__item-ai"> <span class="section-result__item-value">100%</span><span class="section-result__item-description">ИИ коллектив</span></div>
+						</div>
+						<p class="section-result__item-text">Нормализованных НСИ постоянно</p>
+					</div>
 				</div>
 			</section>
 			<!-- Section Security-->
-			<section class="section-security">
-				<div class="container">
-					<h2 class="h2 section-security__title">
-						Обеспечим полную
-						<span class="color-blue">безопасность данных</span>
-						
-						и развернем решение в вашей локальной сети или в нашем защищенном сегменте, созданном специально для вас
-					</h2>
-					<div class="section-security__slider swiper">
-						<div class="swiper-wrapper">
-							<!-- slide-->
-							<figure class="section-security__slide swiper-slide"><img class="section-security__slide-img" src="./images/section-security/img1.svg" alt="">
-								<figcaption class="section-security__slide-text">Политики хранения<br>данных</figcaption>
-							</figure>
-							<!-- slide-->
-							<figure class="section-security__slide swiper-slide"><img class="section-security__slide-img" src="./images/section-security/img2.svg" alt="">
-								<figcaption class="section-security__slide-text">Не нужен доступ<br>к облачным ИИ</figcaption>
-							</figure>
-							<!-- slide-->
-							<figure class="section-security__slide swiper-slide"><img class="section-security__slide-img" src="./images/section-security/img3.svg" alt="">
-								<figcaption class="section-security__slide-text">Модель не запоминает<br>ваши данные</figcaption>
-							</figure>
-						</div>
+			<section class="section-security container">
+				<div class="section-security__title-box">
+					<h2 class="h2 section-security__title">Ваши данные в безопасности</h2>
+					<p class="section-security__text">Развернем решение в вашей локальной сети или в нашем защищенном сегменте, созданном специально для вас</p>
+				</div>
+				<div class="section-security__grid">
+					<!-- item-->
+					<div class="section-security__slide"><span class="section-security__item-top bracket-text">✓</span>
+						<p class="section-security__item-text">Соответствие стандартам безопасности</p>
+					</div>
+					<!-- item-->
+					<div class="section-security__slide"><span class="section-security__item-top bracket-text">✓</span>
+						<p class="section-security__item-text">Не нужен доступ к облачным ИИ</p>
+					</div>
+					<!-- item-->
+					<div class="section-security__slide"><span class="section-security__item-top bracket-text">✓</span>
+						<p class="section-security__item-text">Модель не запоминает ваши данные</p>
 					</div>
 				</div>
 			</section>
@@ -223,14 +216,14 @@
 			<section class="section-registry">
 				<div class="container">
 					<div class="section-registry__box">
-						<h2 class="h2 section-registry__title">Платформа включена в реестр российского ПО</h2>
-						<div class="section-registry__text-box">
-							<picture>
-								<source srcset="images/section-registry/emblem@1x.webp, images/section-registry/emblem@2x.webp 2x" type="image/webp"/><img class="section-registry__img" src="images/section-registry/emblem@1x.png" srcset="images/section-registry/emblem@2x.png 2x" alt=""/>
-							</picture>
-							<p class="section-registry__text">Платформа КОЛЛЕКТИВ создана полностью на базе открытого программного обеспечения и Российских разработок.<br>Мы не используем лицензии третьих сторон.</p>
+						<picture>
+							<source srcset="images/section-registry/emblem@1x.webp, images/section-registry/emblem@2x.webp 2x" type="image/webp"/><img class="section-registry__img" src="images/section-registry/emblem@1x.png" srcset="images/section-registry/emblem@2x.png 2x" alt=""/>
+						</picture>
+						<div class="section-registry__text-box">                   
+							<h2 class="section-registry__title">Платформа включена в реестр российского ПО</h2>
+							<p class="section-registry__text">Платформа КОЛЛЕКТИВ создана полностью на базе открытого программного обеспечения и Российских разработок. Мы не используем лицензии третьих сторон.</p>
+							<p class="section-registry__note">Мы защищаем персональные данные и готовы к аттестации рещения по ФЗ 152</p>
 						</div>
-						<p class="section-registry__note">Мы защищаем персональные данные и готовы к аттестации рещения по ФЗ 152</p>
 					</div>
 				</div>
 			</section>
@@ -264,7 +257,7 @@
 					</div>
 					<!-- elem-->
 					<div class="faq__elem">
-						<p class="faq__elem-title">Какая лицензионная политика у платформы?</p>
+						<p class="faq__elem-title">Какая лицензионная политика у платформы?</p>
 						<div class="faq__elem-box">
 							<p>Коллектив придает первостепенное значение безопасности, внедряя строгие меры контроля за обработкой данных, обеспечивая безопасное соединение с базами данных и предоставляя механизмы для пользователей, позволяющие реализовать их права в соответствии с GDPR. Эта приверженность также распространяется на защиту конфиденциальных медицинских данных в соответствии с HIPAA.</p>
 						</div>
@@ -309,15 +302,15 @@
 			<!-- Section Call-->
 			<section class="section-call container">
 				<div class="section-call__box">
-					<h2 class="h2 section-call__title">Давайте обсудим пилотный проект</h2>
+					<h2 class="section-call__title">Давайте обсудим пилотный проект</h2>
 					<p class="section-call__subtitle">Ответим на все вопросы на звонке</p>
-					<p class="section-call__text">Для того чтобы убедится что ИИ сможет обрабатывать ваши данные и документы, мы прелагаем сделать бесплатный пилотный проект с демонтсрацией критичных для вас моментов технологии</p>
-					<button class="button button--blue section-call__btn" type="button" data-modal="callback">Связаться с нами</button>
+					<p class="section-call__text">Для того чтобы удедится что ИИ сможет обрабатывать ваши данные и документы, мы прелагаем сделать бесплатный пилотный проект с демонтсрацией критичных для вас моментов технологии</p>
+					<button class="button section-call__btn" type="button" data-modal="callback">Связаться с нами</button>
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__container container"><a class="footer__logo-link" href="/" title="На главную"><img class="footer__logo" src="./images/logo-grey.svg" alt="ИИ Коллектив"/></a>
+			<div class="footer__container container"><a class="footer__logo-link" href="/" title="На главную"><img class="footer__logo" src="./images/logo.svg" alt="ИИ Коллектив"/></a>
 				<div class="footer__bottom-row">
 					<p class="footer__text">©2025 Коллектив. Все права защищены</p><a class="footer__link" href="#" target="_blank" rel="nofollow">Политика персональных данных</a><a class="footer__link" href="#" target="_blank" rel="nofollow">Условия использования</a>
 				</div>
@@ -326,7 +319,9 @@
 		<div class="modal modal--callback" id="modal-callback">
 			<div class="modal__window">
 				<button class="modal__close" type="button" aria-label="Закрыть"></button>
-				<h2 class="modal__title">Напишите нам</h2>
+				<div class="modal__title-box">
+					<h2 class="modal__title">Напишите нам</h2>
+				</div>
 				<form class="modal__form" action="/">
 					<!-- form-group-->
 					<div class="form-group form-group--required">
@@ -368,27 +363,26 @@
 Хочу заказать демо звонок!"></textarea><span class="form-group__error">Обязательное поле</span>
 					</div>
 					<label class="checkbox modal__order-checkbox">
-						<input class="checkbox__input" type="checkbox" name="agreement" value="agree"/><span class="checkbox__label">
+						<input class="checkbox__input" type="checkbox" name="agreement" value="agree" checked="checked"/><span class="checkbox__label">
 							Соглашаюсь с
 							<a href="#" target="_blank" rel="nofollow">условиями и правилами</a>
 							
 							обработки персональных данных</span>
 					</label>
-					<div class="modal__form-row modal__order-btn">
-						<div></div>
-						<button class="button button--grey modal__submit" type="submit">Отправить</button>
-					</div>
+					<button class="button modal__submit modal__order-btn" type="submit">Отправить</button>
 				</form>
 			</div>
 		</div>
 		<div class="modal modal--success" id="modal-success">
 			<div class="modal__window">
 				<button class="modal__close" type="button" aria-label="Закрыть"></button>
-				<h2 class="modal__title">Сообщение отправлено</h2>
-				<p class="modal__text">Мы свяжемся с вами в ближайшее время</p>
+				<div class="modal__title-box"> 
+					<h2 class="modal__title">Заявка принята</h2>
+					<p class="modal__text">Мы свяжемся с вами в ближайшее время</p>
+				</div><img class="modal__img" src="./images/success.svg" alt=""/>
 			</div>
 		</div>
-		<script src="./js/vendor.js?v=1748912480625"></script>
-		<script src="./js/main.js?v=1748912480625"></script>
+		<script src="./js/vendor.js?v=1751665985873"></script>
+		<script src="./js/main.js?v=1751665985873"></script>
 	</body>
 </html>
