@@ -39,13 +39,5 @@
 
   &__item {
     height: auto;
-
-    @media (max-width: $breakpoint-tablet) {
-      border-color: #fff;
-    }
-
-    @include desktop {
-      border-color: #fff;
-    }
   }
 }

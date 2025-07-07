@@ -3,9 +3,14 @@
     padding-bottom: 18px;
     background-color: $color-bg2;
     border-bottom: 1px solid $color-bg;
+    transition: background-color $transition-default;
 
     @include tablet {
       padding-bottom: 20px;
+    }
+    
+    &--active {
+      background-color: #191919;
     }
   }
 

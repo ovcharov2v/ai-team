@@ -7,6 +7,17 @@
   user-select: none;
   transition: border-color $transition-default;
 
+  &--in-slider {
+    @include desktop {
+      background-color: #1F1F1F;
+      transition: background-color $transition-default;
+
+      &:hover {
+        background-color: #282828;
+      }
+    }
+  }
+
   &__title {
     line-height: 1.4;
     font-weight: 500;
@@ -74,6 +85,18 @@
     &--full-width {
       width: 100%;
       align-self: unset;
+    }
+
+    .agent--in-slider & {
+      @include desktop {
+        opacity: .7;
+      }
+    }
+
+    .agent--in-slider:hover & {
+      @include desktop {
+        opacity: 1;
+      }
     }
   }
 }
