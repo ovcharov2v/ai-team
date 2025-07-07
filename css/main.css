@@ -1093,17 +1093,19 @@ a {
   border: none;
   border-radius: 3px;
   background-color: #DE0000;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
   text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
-  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
-  transition: background-color 0.2s ease, color 0.2s ease; }
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease; }
   .button:hover {
-    background-color: #ab0000; }
+    background-color: #ab0000;
+    color: #fff; }
   @media (min-width: 768px) {
     .button {
       padding: 12px 24px; } }
@@ -2143,6 +2145,13 @@ a {
           user-select: none;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease; }
+  @media (min-width: 1024px) {
+    .agent--in-slider {
+      background-color: #1F1F1F;
+      -webkit-transition: background-color 0.2s ease;
+      transition: background-color 0.2s ease; }
+      .agent--in-slider:hover {
+        background-color: #282828; } }
   .agent__title {
     line-height: 1.4;
     font-weight: 500;
@@ -2202,6 +2211,12 @@ a {
       -ms-flex-item-align: unset;
           -ms-grid-row-align: unset;
           align-self: unset; }
+    @media (min-width: 1024px) {
+      .agent--in-slider .agent__btn {
+        opacity: .7; } }
+    @media (min-width: 1024px) {
+      .agent--in-slider:hover .agent__btn {
+        opacity: 1; } }
 
 .case {
   display: -webkit-box;
@@ -2267,10 +2282,14 @@ a {
 .faq__elem {
   padding-bottom: 18px;
   background-color: #1F1F1F;
-  border-bottom: 1px solid #101010; }
+  border-bottom: 1px solid #101010;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; }
   @media (min-width: 768px) {
     .faq__elem {
       padding-bottom: 20px; } }
+  .faq__elem--active {
+    background-color: #191919; }
 
 .faq__elem-title {
   position: relative;
@@ -2479,12 +2498,6 @@ a {
     overflow: visible; }
   .section-agents__item {
     height: auto; }
-    @media (max-width: 768px) {
-      .section-agents__item {
-        border-color: #fff; } }
-    @media (min-width: 1024px) {
-      .section-agents__item {
-        border-color: #fff; } }
 
 .section-productivity {
   padding-top: 24px;

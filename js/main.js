@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (otherElem !== elem && otherElem.classList.contains('faq__elem--active')) {
           var otherBox = otherElem.querySelector('.faq__elem-box');
           animateHeight(otherBox, otherBox.scrollHeight, 0);
-          otherElem.classList.remove('active');
+          otherElem.classList.remove('faq__elem--active');
         }
       });
 
